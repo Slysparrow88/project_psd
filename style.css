@@ -28,7 +28,12 @@
     font-weight: 700;
     font-style: normal;
 }
-
+@font-face {
+    font-family: 'Open Sans';
+    src: local('Open Sans'), local('OpenSans'), url('opensans.woff2') format('woff2'), url('opensans.woff') format('woff'), url('opensans.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
 *{
     box-sizing: border-box;
 }
@@ -38,9 +43,14 @@ body, ul{
     list-style: none;
 }
 #search{
+    
     max-width: 440px;
     width: 100%;
     position: relative;
+}
+#search input:focus{
+    outline: none;
+    border: 2px solid #4ccfc1;
 }
 #search input{
     width: 100%;
@@ -55,7 +65,6 @@ body, ul{
     max-width: 1000px;
     margin: auto;
 }
-
 #header-top, #header-nav ul{
     justify-content: space-between;
     align-items: center;
@@ -85,6 +94,7 @@ body, ul{
 #header-nav{
     background: #4ccfc1;
     padding: 10px 0;
+    box-shadow: 0 1px 2px -5px black;
 }
 #header-nav ul li:first-child a{
     padding-left: 0;
@@ -93,16 +103,53 @@ body, ul{
     border:none;
     padding-right: 0;
 }
+.slider-bg{
+    background: #39c0bb;
+}
+#slider{
+    display: flex;
+    padding: 70px 0 55px 0;
+    justify-content: space-around;
+    flex-wrap:wrap;
+}
+.slide-text{
+    max-width: 380px;
+}
+.slide-text h2{
+    text-transform: uppercase;
+    color: white;
+    font-family: 'bebasbold';
+    font-size: 65px;
+    margin: 0;
+}
+.slide-text p{
+    font-family: 'Open Sans';
+    color: white;
+    line-height: 25px;
+    margin: 10px 0 30px 0;
+}
+.slide-text button{
+    height: 43px;
+    width: 137px;
+    background: #39c0bb; 
+    border: 2px solid white;
+    color: white;
+    border-radius: 5px;
+    font-family: 'bebasbold';
+    text-transform: uppercase;
+    font-size: 27px;
+    text-align: center;
+    padding: 5px 0 0 0;
+}
+.slide-text button:hover{
+    -webkit-filter: brightness(70%);
+}
 @media(max-width:1000px){
     #header-top{
         margin: 0 15px;
     }
     #header-nav{
         padding: 0 15px;
-    }
-    #header-nav ul li a{
-        border:none;
-        padding: 0 10px;
     }
 }
 @media(max-width:720px){
@@ -118,5 +165,13 @@ body, ul{
     #header-nav ul li a{
         border:none;
         padding: 0 10px;
+    }
+@media(max-width:600px){
+    #slider{
+        padding: 15px;
+        text-align: center;
+    }
+    #slider h2{
+        margin: 15px;
     }
 }
