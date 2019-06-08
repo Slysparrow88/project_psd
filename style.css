@@ -197,6 +197,39 @@ body, ul{
 #featured-container button:hover{
     -webkit-filter: brightness(70%);
 }
+.footer-top-bg{
+    background: #39c0bb;  
+}
+#footer-top{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 40px;
+}
+#footer-top a{
+    text-decoration: none;
+    margin-bottom: 15px;
+    display: block;
+    text-align: center;
+    color: white;
+}
+#footer-top h2{
+    color: white;
+    font-family: 'bebasbold';
+    text-transform: uppercase;
+}
+#footer-top ul li:last-child a{
+    margin: 0;
+}
+#footer-bottom{
+    background: #2da89b;
+    text-align: center;
+    height: 48px;
+}
+#footer-bottom a{
+    margin: 20px 0 0 0;
+    color: white;
+}
 @media(max-width:1000px){
     #header-top{
         margin: 0 15px;
